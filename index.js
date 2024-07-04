@@ -11,6 +11,7 @@ import { v4 as uuidv4 } from 'uuid';
 import mongoose from 'mongoose'; 
 import XLSX from 'xlsx';
 import Registration from './models/Registration.js'; // Import the model
+import { createObjectCsvWriter } from 'csv-writer';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -21,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const writeFile = promisify(fs.writeFile);
 
-app.use(express.static('static')); 
+app.use(express.static('static'));
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://bhattacharjeeagnivajobs:MgCW8rI2JIuaDJ0I@cluster0.pzt6xl6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
@@ -34,7 +35,48 @@ mongoose.connect('mongodb+srv://bhattacharjeeagnivajobs:MgCW8rI2JIuaDJ0I@cluster
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/static/index1.html");
+  res.sendFile(__dirname + "/static/index.html");
+});
+// Route for serving the alumni.html form
+app.get("/alumni", (req, res) => {
+  res.sendFile(__dirname + "/static/alumni.html");
+});
+
+// Route to handle alumni form submission
+app.post("/submit-alumni", async (req, res) => {
+  try {
+      const { Name, Email, phone, transactionID } = req.body;
+
+      // Create CSV writer
+      const csvWriter = createObjectCsvWriter({
+          path: `${__dirname}/static/alumni_registrations.csv`,
+          header: [
+              { id: 'name', title: 'Name' },
+              { id: 'email', title: 'Email' },
+              { id: 'phone', title: 'Phone' },
+              { id: 'transactionID', title: 'Transaction ID' }
+          ],
+          append: true // Append to the file if it exists
+      });
+
+      // Data to be written
+      const data = [
+          {
+              name: Name,
+              email: Email,
+              phone: phone,
+              transactionID: transactionID
+          }
+      ];
+
+      // Write data to CSV file
+      await csvWriter.writeRecords(data);
+
+      res.send("Registration successful! Your details have been saved.");
+  } catch (error) {
+      console.error('Error processing the form submission:', error);
+      res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/ex-student", (req, res) => {

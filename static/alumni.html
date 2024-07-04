@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Association Registration</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Join Alumni Association</h1>
+    <form id="alumniForm" action="/submit-alumni" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br>
+        <img src="./QR.jpg" alt="My QR code">
+        <p>I am pretty shameless in these things :)</p>
+        <br>
+        <label for="id">Transaction ID:</label>
+        <input type="text" id="transactionID" name="transactionID" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
