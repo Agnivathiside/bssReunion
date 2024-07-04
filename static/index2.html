@@ -64,75 +64,57 @@
       .custom-shadow {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8); /* Adjust the blur (second and third values) */
         }
-      
+        .hero-section {
+      background: linear-gradient(45deg, #3b4444,#202428,black);
+    }
+    
       
   </style>
-    </style>
+    
   </head>
   <body>
-    <!--Section 1 landing page-->
-    <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
-      <a
-        href="/"
-        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-      >
-        <svg
-          class="custom-svg"
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="currentColor"
-          class="bi bi-backpack-fill"
-          viewBox="0 0 16 16"
-        >
-          <path d="M5 13v-3h4v.5a.5.5 0 0 0 1 0V10h1v3z" />
-          <path
-            d="M6 2v.341C3.67 3.165 2 5.388 2 8v5.5A2.5 2.5 0 0 0 4.5 16h7a2.5 2.5 0 0 0 2.5-2.5V8a6 6 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6 6 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43.5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"
-          />
-        </svg>
-        <span class="fs-4">THE BSS SCHOOL ALUMNI ASSOCIATION</span>
-      </a>
+    <!--Header-->
+  <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="custom-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-backpack-fill" viewBox="0 0 16 16">
+        <path d="M5 13v-3h4v.5a.5.5 0 0 0 1 0V10h1v3z" />
+        <path d="M6 2v.341C3.67 3.165 2 5.388 2 8v5.5A2.5 2.5 0 0 0 4.5 16h7a2.5 2.5 0 0 0 2.5-2.5V8a6 6 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6 6 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43.5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5" />
+      </svg>
+      <span class="fs-4">THE BSS SCHOOL ALUMNI ASSOCIATION</span>
+    </a>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link active ml-8">About</a>
-        </li>
-      </ul>
-    </header>
-    <div class="bg-dark text-secondary px-4 py-5 text-center hero-section">
-      <img src="./shooting-stars.png" class="img-fluid left-img" alt="Left Image" />
-      <img src="./rotated-star.png" class="img-fluid right-img" alt="Right Image" />
-      <div class="py-5">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <h1 class="display-5 fw-bold text-white">Nostalgia Returns</h1>
-              <p class="fs-5 mb-4">
-                The BSS School Alumni Association presents MILAN - Welcome to
-                our long-awaited reunion! It's a joy to see familiar faces and
-                reconnect after so much time. Today, we celebrate cherished
-                memories, rekindle old friendships, and create new ones. Let's
-                share stories, laughter, and perhaps a few tears, as we
-                reminisce about the past and look forward to the future. Here's
-                to the bonds that have stood the test of time and the wonderful
-                moments ahead. Enjoy every minute of this special gathering!
-              </p>
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button
-                  type="button"
-                  class="btn btn-outline-info btn-lg px-6 me-sm-3 fw-bold"
-                >
-                  Scroll below to know more!
-                </button>
-              </div>
-            </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link active ml-8">About</a>
+      </li>
+    </ul>
+  </header>
+  <!-- HERO section -->
+<div class="text-secondary px-4 py-5 text-center hero-section">
+  <img src="./shooting-stars.png" class="img-fluid left-img" alt="Left Image" />
+  <img src="./rotated-star.png" class="img-fluid right-img" alt="Right Image" />
+  <div class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-white">Nostalgia Returns</h1>
+          <p class="fs-5 mb-4">
+            The BSS School Alumni Association presents MILAN - Welcome to our long-awaited reunion! It's a joy to see familiar faces and reconnect after so much time. Today, we celebrate cherished memories, rekindle old friendships, and create new ones. Let's share stories, laughter, and perhaps a few tears, as we reminisce about the past and look forward to the future. Here's to the bonds that have stood the test of time and the wonderful moments ahead. Enjoy every minute of this special gathering!
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-outline-info btn-lg px-6 me-sm-3 fw-bold">
+              Scroll below to know more!
+            </button>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   
     <!--Second section i.e ALumni Login-->
       <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">

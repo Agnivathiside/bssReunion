@@ -34,7 +34,7 @@ mongoose.connect('mongodb+srv://bhattacharjeeagnivajobs:MgCW8rI2JIuaDJ0I@cluster
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/static/index.html");
+  res.sendFile(__dirname + "/static/index1.html");
 });
 
 app.get("/ex-student", (req, res) => {
