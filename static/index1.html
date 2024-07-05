@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REUNIONnew</title>
+    <title>BSSReunion</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/x-icon" href="./the-bss-school-logo.png">
     <style>
       .custom-svg {
         margin-left: 20px;
@@ -70,7 +71,7 @@
     </style>
   </head>
   <body>
-    <!--Section 1 landing page-->
+    <!--Section 1 header-->
     <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
       <a
         href="/"
@@ -95,10 +96,10 @@
 
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Home</a>
+          <a href="index.html" class="nav-link active" aria-current="page">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link active ml-8">About</a>
+          <a href="#footer" class="nav-link active ml-8">About</a>
         </li>
       </ul>
     </header>
@@ -109,7 +110,7 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6">
-              <h1 class="display-5 fw-bold text-white">Nostalgia Returns</h1>
+              <h1 class="display-5 fw-bold text-white">Nostalgia Returns🎉</h1>
               <p class="fs-5 mb-4">
                 The BSS School Alumni Association presents MILAN - Welcome to
                 our long-awaited reunion! It's a joy to see familiar faces and
@@ -135,22 +136,19 @@
     </div>
   
     <!--Second section i.e ALumni Login-->
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Alumni Login</h1>
-        <p class="lead">
-          The Alumni Association invites former students to join by paying a one-time fee of Rs. 1000, granting lifetime membership benefits. Upon registration, members are eligible to participate in the event 'Milan'
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <button type="button" class="btn btn-dark btn-lg px-4" onclick="console.log('Button clicked'); window.location.href='/alumni'">Join Alumni Association</button>
-          <button type="button" class="btn btn-dark btn-lg px-4" onclick="console.log('Button clicked'); window.location.href='/ex-student'">Sign up for Milan</button>
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Alumni Login</h1>
+          <p class="lead">The Alumni Association invites former students to join by paying a one-time fee of Rs. 1000, granting lifetime membership benefits. Upon registration, members are eligible to participate in the event 'Milan'</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <button type="button" class="btn btn-dark btn-lg px-4 " onclick="window.location.href='/alumni'">Join Alumni Association</button>
+            <button type="button" class="btn btn-dark btn-lg px-4" onclick="window.location.href='/ex-student'">Sign up for Milan</button>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden custom-shadow">
+            <img class="rounded-lg-3" src="./the-bss-schoolpic3.jpg" alt="" width="720">
         </div>
       </div>
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden custom-shadow">
-        <img class="rounded-lg-3" src="./the-bss-schoolpic3.jpg" alt="" width="720">
-      </div>
-    </div>    
-    
    <!-- Third section i.e Organiser Login -->
 <!-- Third section i.e Organiser Login -->
 <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg bg-dark">
@@ -188,7 +186,7 @@
 </div>
 
  <!--Contact Us Section-->
- <div class="container">
+ <div class="container" id ="footer">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
     <div class="col mb-3 text-center">
       <a href="/" class="d-flex justify-content-center align-items-center mb-3 link-body-emphasis text-decoration-none">
@@ -207,9 +205,7 @@
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Anjali Lalwani:9433637741</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Anisha Lalwani:9433627741</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> -->
+        
       </ul>
     </div>
 
@@ -217,10 +213,12 @@
       <h5>DISCLAIMER</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">The website is currently under construction and may exhibit occasional issues. If you encounter any problems, please do not hesitate to contact us via WhatsApp or voice call.</a></li>
-        
-      </ul>
+        </ul>
     </div>
-  </footer>
+    </footer>
+  <div class="row">
+    <div class="col text-center">
+      <p class="text-body-secondary">Made with ❤️ by <a href="https://www.instagram.com/such.is.me" class="text-decoration-none">Suchismita Singha Roy</a> and <a href="https://www.instagram.com/im_agniva_007" class="text-decoration-none">Agniva Bhattacharjee</a></p>
 </div>
 
       

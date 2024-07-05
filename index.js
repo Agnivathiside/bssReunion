@@ -72,7 +72,8 @@ app.post("/submit-alumni", async (req, res) => {
       // Write data to CSV file
       await csvWriter.writeRecords(data);
 
-      res.send("Registration successful! Your details have been saved.");
+      // res.send("Registration successful! Your details have been saved.");
+      res.sendFile(__dirname+ "/static/thenga2.html");
   } catch (error) {
       console.error('Error processing the form submission:', error);
       res.status(500).send('Internal Server Error');
@@ -152,15 +153,8 @@ app.post("/submit", async (req, res) => {
       <html>
         <body>
           <p>Hello ${name},</p>
-          <p>Thank you for submitting your information. We have received your details:</p>
-          <ul>
-            <li>Name: ${name}</li>
-            <li>Email: ${email}</li>
-            <li>Phone Number: ${no}</li>
-            <li>Year of Pass Out: ${passOutYear}</li>
-            <li>Unique ID: ${uniqueId}</li>
-            <li>Transaction ID: ${transactionID}</li>
-          </ul>
+          <p>Thank you for submitting your information.</p>
+          <p>We are so glad that you are coming!</p>
           <p>Attached is your unique QR code image.</p>
           <p>Best regards,<br>Your Company</p>
         </body>
