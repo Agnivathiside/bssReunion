@@ -173,7 +173,7 @@ app.post("/submit", async (req, res) => {
     const mailOptions = {
       from: 'bhattacharjee.agniva.jobs@gmail.com', 
       to: email,
-      subject: 'Your Event QR Code',
+      subject: 'Milan Pass!',
       html: htmlContent,
       attachments: [
         {
